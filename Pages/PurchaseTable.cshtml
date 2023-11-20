@@ -1,0 +1,36 @@
+﻿@page
+@model pic5.Pages.PurchaseTableModel
+
+
+<h1>Purchases table</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Item</th>
+            <th>Price</th>
+            <th>DepartmentId</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var purchase in Model.Purchases)
+        {
+            <tr>
+                <td>@purchase.Id</td>
+                <td>@purchase.Item</td>
+                <td>@purchase.Price</td>
+                <td>@purchase.DepartmentId</td>
+                <td>
+                    <a asp-page="./Edit" asp-route-id="@purchase.Id">Edit</a> |
+                    <a asp-page="./Delete" asp-route-id="@purchase.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<button>
+    <a asp-page="./Create" >Create</a>
+</button>
+

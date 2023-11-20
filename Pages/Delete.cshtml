@@ -1,0 +1,23 @@
+﻿
+@page
+@model Delete
+
+<h2>Delete Purchase</h2>
+
+<h3>Are you sure you want to delete this purchase?</h3>
+<div>
+    <dl class="dl-horizontal">
+        <dt>Item</dt>
+        <dd>@Model.Purchase.Item</dd>
+        <dt>Price</dt>
+        <dd>@Model.Purchase.Price</dd>
+        <dt>DepartmentId</dt>
+        <dd>@Model.Purchase.DepartmentId</dd>
+    </dl>
+
+    <form method="post">
+        <input type="hidden" asp-for="Purchase.Id" />
+        <button type="submit">Delete</button>
+        <a asp-page="./PurchaseTable">Back to List</a>
+    </form>
+</div>

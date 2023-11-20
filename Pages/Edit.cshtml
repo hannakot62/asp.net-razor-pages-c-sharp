@@ -1,0 +1,22 @@
+﻿
+@page
+@model Edit
+
+<h2>Edit Purchase</h2>
+
+<form method="post">
+    <input type="hidden" asp-for="Purchase.Id" />
+    <div>
+        <label asp-for="Purchase.Item"></label>
+        <input asp-for="Purchase.Item" />
+    </div>
+    <div>
+        <label asp-for="Purchase.Price"></label>
+        <input asp-for="Purchase.Price" />
+    </div>
+    <div>
+        <label asp-for="Purchase.DepartmentId"></label>
+        <input asp-for="Purchase.DepartmentId" />
+    </div>
+    <button type="submit">Save Changes</button>
+</form>

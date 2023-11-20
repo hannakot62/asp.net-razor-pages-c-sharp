@@ -1,0 +1,20 @@
+﻿@page
+@model Create
+
+<h2>Create Purchase</h2>
+
+<form method="post">
+    <div>
+        <label asp-for="Purchase.Item"></label>
+        <input asp-for="Purchase.Item" />
+    </div>
+    <div>
+        <label asp-for="Purchase.Price"></label>
+        <input asp-for="Purchase.Price" />
+    </div>
+    <div>
+        <label asp-for="Purchase.DepartmentId"></label>
+        <input asp-for="Purchase.DepartmentId" />
+    </div>
+    <button type="submit">Create</button>
+</form>
